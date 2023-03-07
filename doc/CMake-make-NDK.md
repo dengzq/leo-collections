@@ -15,14 +15,14 @@
 * make: 批量处理工具，通过 makefile 文件中用户指定的命令对 c 源文件进行编译和链接
 * NDK: Android NDK 是一组能将原生代码（c代码）嵌入到 Android 应用中的开发套件
 
-
+![构建过程](https://raw.githubusercontent.com/dengzq/leo-collections/main/doc/img/img2.png?token=GHSAT0AAAAAAB4RDCU2WT7DB7OUCUHWZIRKZAHMCGA)
 
 
 ### 2.ndk 使用 Cmake / make 
 
 1) 通过 gradle 打包动态库并集成到 apk
 
-![build.gradle 配置](https://raw.githubusercontent.com/dengzq/leo-collections/main/doc/img/img1.png?token=GHSAT0AAAAAAB4RDCU24ZRCLR3OOWZLS5EOZAHJVTA)
+![build.gradle 配置](https://raw.githubusercontent.com/dengzq/leo-collections/main/doc/img/img1.png)
 
 
 #####1.使用cmake 手动打 makefile
