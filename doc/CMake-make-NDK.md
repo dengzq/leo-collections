@@ -52,3 +52,7 @@ cmake -DCMAKE_TOOLCHAIN_FILE=/Users/dengzq/Library/Android/sdk/ndk/25.2.9519653/
 
 ![](https://github.com/dengzq/leo-collections/blob/main/doc/img/img3.png?raw=true)
 
+
+引用：
+
+[1.CMake参数](https://developer.android.com/ndk/guides/cmake?hl=zh-cn)
