@@ -28,7 +28,6 @@
 4. 配置项目app下的 `build.gradle` 文件
 
 **ps: 每个版本的 AGP 都有一个对应的 ndk 版本，如果 ndk 版本和 CMake 版本不一致，也会有 .so 产物打包失败的问题。这个时候需要通过配置 ndkVersion 和 cmake version 使其能在同一版本环境下工作**
-
 ![](https://github.com/dengzq/leo-collections/blob/main/doc/img/img1.png?raw=true)
 
 #####1.使用cmake 手动打 makefile
@@ -39,10 +38,17 @@
 * `CMAKE_TOOLCHAIN_FILE` ：指定`CMAKE_TOOLCHAIN_FILE `工具链路径
 * `-DANDROID_ABI ` : 指定 `ANDROID_ABI ` cpu架构 
 
-以 Android 平台为例，cd 到目标工程的 cpp目录，比如 cd 到 `/src/main/cpp`， 执行 CMake -D 命令并拼接 ndk 及架构参数:
+以 Android 平台为例，cd 到目标工程的 cpp目录，比如 cd 到 `/src/main/cpp`.
+
+1) 执行 CMake -D 命令并拼接 ndk 及架构参数:
 
 ```
-
 cmake -DCMAKE_TOOLCHAIN_FILE=/Users/dengzq/Library/Android/sdk/ndk/25.2.9519653/build/cmake/android.toolchain.cmake -DANDROID_ABI=armeabi-v7a
-
 ```
+
+此时经过 `CMakeLists.txt` 配置脚本，CMake 自动生成 makefile 
+
+2) 在当前文件下执行make命令 `make`，会根据 CMake 生成的 makefile 脚本规则，打出对应的原生库产物.
+
+![](https://github.com/dengzq/leo-collections/blob/main/doc/img/img3.png?raw=true)
+
