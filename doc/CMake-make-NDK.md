@@ -30,7 +30,7 @@
 **ps: 每个版本的 AGP 都有一个对应的 ndk 版本，如果 ndk 版本和 CMake 版本不一致，也会有 .so 产物打包失败的问题。这个时候需要通过配置 ndkVersion 和 cmake version 使其能在同一版本环境下工作**
 ![](https://github.com/dengzq/leo-collections/blob/main/doc/img/img1.png?raw=true)
 
-#####1.使用cmake 手动打 makefile
+##### 1.使用cmake 手动打 makefile
 手动使用CMake 和 make 命令会比使用 gradle 构建脚本更加灵活，大多数情况下我们的共享库不仅只针对 Android，同时也会需要构建其他平台的产物。
 
 构建前先熟悉两个关键的 CMake 构建参数：
